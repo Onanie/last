@@ -6,11 +6,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#D3D3D3",
   },
   schoolImage: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
-    margin: 10,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    marginBottom: 5,
+    maxHeight: 120,
+    maxWidth: 350,
+    minHeight: 120,
+    minWidth: 350,
   },
   schoolCard: {
     borderColor: "gray",
@@ -25,6 +27,12 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     borderBottomWidth: 1,
     alignItems: "center",
+  },
+  footer: {
+    padding: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
   },
 });
 

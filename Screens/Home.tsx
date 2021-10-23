@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-// import all the components we are going to use
 import {
   SafeAreaView,
   View,
   Text,
-  StyleSheet,
   FlatList,
   ActivityIndicator,
   Image,
@@ -65,7 +63,7 @@ export default function Home() {
   };*/
   const renderFooter = () => {
     return (
-      <View style={stylez.footer}>
+      <View style={styles.footer}>
         {loading ? (
           <ActivityIndicator color="black" style={{ margin: 15 }} />
         ) : null}
@@ -79,16 +77,7 @@ export default function Home() {
         style={styles.schoolCard}
         onPress={() => openMaps(item)}
       >
-        <Image
-          source={item.image_link}
-          style={{
-            margin: 5,
-            maxHeight: 120,
-            maxWidth: 300,
-            minHeight: 120,
-            minWidth: 300,
-          }}
-        />
+        <Image source={item.image_link} style={styles.schoolImage} />
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>{item.name}</Text>
         <Text> Address: {item.address}</Text>
       </TouchableOpacity>
@@ -117,11 +106,3 @@ export default function Home() {
     </SafeAreaView>
   );
 }
-const stylez = StyleSheet.create({
-  footer: {
-    padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-});
